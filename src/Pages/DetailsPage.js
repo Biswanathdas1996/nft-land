@@ -9,7 +9,8 @@ import Loader from "../components/shared/Loader";
 import { buyNft, displayRazorpay } from "../functions/buyNft";
 import TransctionModal from "../components/shared/TransctionModal";
 import { accessablity } from "../utils/tokenListingState";
-
+import Alert from "@mui/material/Alert";
+import { isAdmin } from "../utils/isAdmin";
 import {
   getContractAddress,
   getcurrentNetworkId,
@@ -97,6 +98,9 @@ export default function DetailsPage({ match }) {
       <ThemeProvider theme={theme}>
         {start && (
           <TransctionModal response={response} modalClose={modalClose} />
+        )}
+        {isAdmin(account) && (
+          <Alert severity="warning">Admin access enabled</Alert>
         )}
         <CssBaseline />
         <Container>
