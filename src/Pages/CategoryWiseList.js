@@ -7,6 +7,7 @@ import Container from "@mui/material/Container";
 
 import NftCard from "../components/shared/NFT-Card";
 import IndicationTable from "../components/shared/IndicationTable";
+import PieChat from "../components/shared/PieChat";
 import { _fetch } from "../CONTRACT-ABI/connect";
 import Loader from "../components/shared/Loader";
 import { useParams } from "react-router-dom";
@@ -75,8 +76,10 @@ export default function HomePage() {
             )}
           </Grid>
         </Grid>
-        <Grid item xs={12} sm={12} md={3}></Grid>
-        <Grid item xs={12} sm={12} md={3}>
+        <Grid item xs={12} sm={12} md={4}>
+          <PieChat />
+        </Grid>
+        <Grid item xs={12} sm={12} md={2}>
           <IndicationTable />
         </Grid>
       </Grid>

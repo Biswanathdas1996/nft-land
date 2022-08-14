@@ -4,9 +4,9 @@ import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-import imgx1 from "../../assets/images/vrgif.gif";
-import imgx2 from "../../assets/images/05metaversebuild-Brainlight-alamy.jpeg";
-import imgx4 from "../../assets/images/sports.gif";
+import imgx1 from "../../assets/images/6SY62XLKNFNYJO7YTUDXKOGGMM.jpg";
+import imgx2 from "../../assets/images/1_eROVN2pANPNY3wGuzQ0nGQ.png";
+import imgx4 from "../../assets/images/0_k9o3-unmD8WUNxQ1.png";
 
 import { useNavigate } from "react-router-dom";
 
