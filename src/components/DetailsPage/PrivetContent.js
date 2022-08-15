@@ -45,7 +45,7 @@ const Bid = ({ tokenId }) => {
         overflow: "auto",
       }}
     >
-      <Certificate account={account} tokenId={}/>
+      <Certificate account={account} tokenId={tokenId} />
     </TabPanel>
   );
 };

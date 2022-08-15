@@ -7,7 +7,7 @@ import StampPapetImg from "../assets/images/stamp-paper.jpg";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 
-export default function Certificate({ account }) {
+export default function Certificate({ account, tokenId }) {
   return (
     <Box>
       <Grid container spacing={2}>
@@ -22,9 +22,9 @@ export default function Certificate({ account }) {
             <CardContent>
               <Grid container spacing={2}>
                 <Grid item xs={12} md={12} sm={12} lg={12}>
-                  <h2 style={{ fontWeight: "bold", textAlign: "center" }}>
-                    Ownership of Land
-                  </h2>
+                  <h3 style={{ fontWeight: "bold", textAlign: "center" }}>
+                    Ownership of Land - Plaot #{tokenId}
+                  </h3>
                 </Grid>
                 <Grid item xs={12} md={12} sm={12} lg={12}>
                   <h5
