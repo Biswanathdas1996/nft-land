@@ -84,7 +84,7 @@ export default function HomePage() {
                 </Grid>
               ) : (
                 <Grid item xs={12} sm={12} md={12}>
-                  <h3>No NFT available</h3>
+                  <h3 style={{ color: "white" }}>No NFT available</h3>
                 </Grid>
               )}
             </Grid>
