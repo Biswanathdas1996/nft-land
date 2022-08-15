@@ -1,6 +1,5 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-
 import Home from "./Pages/Home";
 import PublishArt from "./Pages/PublishArt";
 import SingleNFT from "./Pages/SingleNFT";
@@ -8,13 +7,11 @@ import FractionalNFT from "./Pages/FractionalNFT";
 import ChooseNFT from "./components/FractionalNFT/ChooseNFT";
 import CreateFraction from "./components/FractionalNFT/CreateFraction";
 import MyFractionalNFT from "./components/FractionalNFT/MyFractionalNFT";
-
 import DetailsPage from "./Pages/DetailsPage";
 import TopSelling from "./Pages/TopSelling";
 import CategoryWiseList from "./Pages/CategoryWiseList";
 import Profile from "./Pages/Profile";
 import HowITworks from "./Pages/HowITworks";
-import Certificate from "./Pages/Certificate";
 
 class Routing extends React.Component {
   render() {
@@ -35,7 +32,6 @@ class Routing extends React.Component {
           element={<CreateFraction />}
         />
         <Route exact path="/my-fractional-nft" element={<MyFractionalNFT />} />
-
         <Route exact path="/details/:tokenId" element={<DetailsPage />} />
         <Route
           exact
@@ -43,11 +39,8 @@ class Routing extends React.Component {
           element={<CategoryWiseList />}
         />
         <Route exact path="/top-selling" element={<TopSelling />} />
-
         <Route exact path="/profile" element={<Profile />} />
         <Route exact path="/HowItWorks" element={<HowITworks />} />
-        <Route exact path="/Certificate" element={<Certificate />} />
-
         <Route
           render={function () {
             return <h1>Not Found</h1>;

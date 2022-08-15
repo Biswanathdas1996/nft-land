@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
-
 import { TabPanel } from "@mui/lab";
-
 import { _account } from "../../CONTRACT-ABI/connect";
-
-import Certificate from "../../Pages/Certificate";
+import Certificate from "./Certificate";
 
 const Bid = ({ tokenId }) => {
   const [account, setAccount] = useState([]);
@@ -27,7 +24,6 @@ const Bid = ({ tokenId }) => {
       sx={{
         backgroundColor: "#F0F6FF",
         width: "100%",
-
         overflow: "auto",
       }}
     >

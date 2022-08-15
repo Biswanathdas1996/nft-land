@@ -2,8 +2,7 @@ import * as React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import "../styles/certificate.css";
-import StampPapetImg from "../assets/images/stamp-paper.jpg";
+import StampPapetImg from "../../assets/images/stamp-paper.jpg";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 
