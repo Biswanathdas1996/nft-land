@@ -247,7 +247,7 @@ const RightContent = ({
               />
 
               <Tab
-                label="Private Content"
+                label="Document"
                 value="3"
                 sx={{
                   textTransform: "none",
