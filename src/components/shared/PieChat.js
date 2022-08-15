@@ -11,6 +11,10 @@ const pieData = [
     name: "Sold",
     value: 3,
   },
+  {
+    name: "Re-sale",
+    value: 15,
+  },
 ];
 
 const CustomTooltip = ({ active, payload, label }) => {

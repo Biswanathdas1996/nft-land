@@ -14,6 +14,7 @@ import TopSelling from "./Pages/TopSelling";
 import CategoryWiseList from "./Pages/CategoryWiseList";
 import Profile from "./Pages/Profile";
 import HowITworks from "./Pages/HowITworks";
+import Certificate from "./Pages/Certificate";
 
 class Routing extends React.Component {
   render() {
@@ -45,6 +46,7 @@ class Routing extends React.Component {
 
         <Route exact path="/profile" element={<Profile />} />
         <Route exact path="/HowItWorks" element={<HowITworks />} />
+        <Route exact path="/Certificate" element={<Certificate />} />
 
         <Route
           render={function () {

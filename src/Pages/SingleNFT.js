@@ -486,6 +486,11 @@ const Mint = () => {
                                           control={<Radio />}
                                           label={getTokenListingState("3")}
                                         />
+                                        <FormControlLabel
+                                          value="8"
+                                          control={<Radio />}
+                                          label={getTokenListingState("8")}
+                                        />
                                       </RadioGroup>
                                     </FormControl>
                                   </div>

@@ -65,7 +65,11 @@ export default function HomePage() {
         <br />
         <Grid container spacing={0} style={{ width: "100%" }}>
           <Grid item xs={12} sm={12} md={6}>
-            <Grid container spacing={0} style={{ width: "80%" }}>
+            <Grid
+              container
+              spacing={0}
+              style={{ width: "80%", backgroundColor: "black" }}
+            >
               {tokens && tokens?.length > 0 ? (
                 tokens?.map((item) => {
                   return (

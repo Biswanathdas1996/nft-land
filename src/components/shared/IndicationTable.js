@@ -6,7 +6,11 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import { allStates, badgeUI } from "../../utils/tokenListingState";
+import {
+  allStates,
+  badgeUI,
+  assetHavingImage,
+} from "../../utils/tokenListingState";
 
 export default function BasicTable() {
   return (
@@ -31,7 +35,11 @@ export default function BasicTable() {
                 align="right"
                 style={{ backgroundColor: badgeUI(row.id) }}
               >
-                {badgeUI(row.id)}
+                {assetHavingImage.includes(row.id) ? (
+                  <img src={badgeUI(row.id)} alt="grass" height="30" />
+                ) : (
+                  ""
+                )}
               </TableCell>
             </TableRow>
           ))}

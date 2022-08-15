@@ -15,10 +15,15 @@ import { _fetch, _account } from "../../CONTRACT-ABI/connect";
 // import { getIcon } from "../../utils/currencyIcon";
 // import { getSymbol } from "../../utils/currencySymbol";
 // import { convertWeiToToken } from "../../utils/convertPrice";
-import { badgeUI, userAllowedActions } from "../../utils/tokenListingState";
+import {
+  badgeUI,
+  userAllowedActions,
+  assetHavingImage,
+} from "../../utils/tokenListingState";
 import { isAdmin } from "../../utils/isAdmin";
 // import CircularProgress from "@material-ui/core/CircularProgress";
 import Loader from "../shared/Loader";
+import CardMedia from "@mui/material/CardMedia";
 
 export default function NFTCard({
   tokenId,
@@ -69,12 +74,20 @@ export default function NFTCard({
           xs={1}
           sm={1}
           md={1}
-          style={{ border: "none", boxShadow: "none", cursor: "pointer" }}
+          style={{
+            border: "none",
+            boxShadow: "none",
+            cursor: "pointer",
+            padding: 0,
+            margin: 0,
+            overflow: "hidden",
+            height: 48,
+          }}
         >
           <Card
             sx={{
               // width: 50,
-              display: "flex",
+              // display: "flex",
               flexDirection: "column",
               backgroundColor: badgeUI(listingState),
 
@@ -82,37 +95,47 @@ export default function NFTCard({
               boxShadow: "none",
             }}
             style={
-              !userAllowedActions.includes(listingState)
+              !userAllowedActions.includes(listingState) &&
+              !isAdmin(account) &&
+              listingState !== "4"
                 ? { border: `0.01px solid ${badgeUI(listingState)}` }
                 : { border: "0.01px solid rgba(0, 0, 0, 0.25)" }
             }
             onClick={(e) => onClickOnPlot(e)}
           >
-            <CardContent style={{ paddingBottom: 0, border: "none" }}>
-              {/* {badgeUI(listingState)} */}
-              {/* {selfOwner()} */}
-
-              <Typography
-                style={{ fontSize: 10, cursor: "pointer" }}
-                variant="body2"
-                paragraph
-                item
-                fontWeight="500"
-                sx={{
+            {assetHavingImage.includes(listingState) ? (
+              <CardMedia
+                component="img"
+                height="48"
+                image={badgeUI(listingState)}
+                alt="green iguana"
+                style={{
+                  borderRadius: "0px",
                   overflow: "hidden",
-                  textOverflow: "ellipsis",
-                  width: "11rem",
                 }}
-              >
-                {userAllowedActions.includes(listingState) ? (
-                  `${tokenId}`
-                ) : (
-                  <p style={{ margin: 14.5 }}></p>
-                )}
-
-                {/* Plot #{tokenId} */}
-              </Typography>
-            </CardContent>
+              />
+            ) : (
+              <CardContent style={{ paddingBottom: 0, border: "none" }}>
+                <Typography
+                  style={{ fontSize: 10, cursor: "pointer" }}
+                  variant="body2"
+                  paragraph
+                  item
+                  fontWeight="500"
+                  sx={{
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                    width: "11rem",
+                  }}
+                >
+                  {userAllowedActions.includes(listingState) ? (
+                    `${tokenId}`
+                  ) : (
+                    <p style={{ margin: 14.5 }}></p>
+                  )}
+                </Typography>
+              </CardContent>
+            )}
           </Card>
         </Grid>
       ) : (

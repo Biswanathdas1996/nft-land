@@ -1,3 +1,9 @@
+import Grass from "../assets/images/grass.jpg";
+import Pool from "../assets/images/pool.jpg";
+import Market from "../assets/images/trade-tent-with-fresh-vegetables-vector-17234481.jpg";
+import Hospital from "../assets/images/hospital.png";
+import Road from "../assets/images/road.png";
+
 export const allStates = [
   {
     id: "1",
@@ -61,15 +67,15 @@ export const badgeUI = (listingState) => {
     case "3":
       return "#DE3163";
     case "4":
-      return "#1D8348";
+      return Grass;
     case "5":
-      return "#FF7F50";
+      return Hospital;
     case "6":
-      return "#8E44AD";
+      return Market;
     case "7":
-      return "#2980B9";
+      return Pool;
     case "8":
-      return "#566573";
+      return Road;
 
     default:
     // code block
@@ -90,3 +96,6 @@ export const getTokenListingState = (id) => {
 };
 
 export const userAllowedActions = ["1", "2", "3"];
+
+// asset those are having img on the map
+export const assetHavingImage = ["4", "7", "6", "5", "8"];
