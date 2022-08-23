@@ -15,10 +15,10 @@ import ShareIcon from "@mui/icons-material/Share";
 
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import Grid from "@mui/material/Grid";
-import Blog1 from "../../assets/images/metaverse-vr-vr.gif";
+import Blog1 from "../../assets/images/land.jpg";
 import Blog2 from "../../assets/images/Metaverse image.jpg";
-import Blog3 from "../../assets/images/CES_ShiftAll_1440x700_Desk.png";
-import Blog4 from "../../assets/images/medical.gif";
+import Blog3 from "../../assets/images/virtual-lands-2.jpg";
+import Blog4 from "../../assets/images/61c1fee5b99e6d5454f29f65_sandbox-header2.png";
 
 export default function RecipeReviewCard() {
   const cardUI = (text, img, user, height) => {

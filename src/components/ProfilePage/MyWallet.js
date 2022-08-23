@@ -78,7 +78,8 @@ const WalledCard = () => {
           <Card style={styles.card}>
             <Typography>Total Balance</Typography>
             <Typography style={styles.typo2}>
-              {parseFloat(Number(balance)).toFixed(2)} {getSymbol()}
+              {parseFloat(Number(balance)).toFixed(2)} ETH
+              {/* {getSymbol()} */}
             </Typography>
           </Card>
         </Grid>

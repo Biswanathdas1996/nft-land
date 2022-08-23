@@ -257,7 +257,7 @@ const RightContent = ({
                 disabled={owner !== account}
               />
               <Tab
-                label="Accessablity"
+                label="Accessibility"
                 value="4"
                 sx={{
                   textTransform: "none",

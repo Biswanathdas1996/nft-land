@@ -78,7 +78,7 @@ export default function Certificate({ account, tokenId }) {
               <Grid container spacing={2}>
                 <Grid item xs={12} md={12} sm={12} lg={12}>
                   <h3 style={{ fontWeight: "bold", textAlign: "center" }}>
-                    Ownership of Land - Plaot #{tokenId}
+                    Ownership of Land - Plot #{tokenId}
                   </h3>
                 </Grid>
                 <Grid item xs={12} md={12} sm={12} lg={12}>

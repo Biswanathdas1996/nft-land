@@ -7,12 +7,12 @@ import Road from "../assets/images/road.png";
 export const allStates = [
   {
     id: "1",
-    type: "For sell",
+    type: "For sale",
     value: "Listable",
   },
   {
     id: "2",
-    type: "Not for sell",
+    type: "Not for sale",
     value: "Visible",
   },
   {
