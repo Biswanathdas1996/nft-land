@@ -13,6 +13,9 @@ import Loader from "../components/shared/Loader";
 import { useParams } from "react-router-dom";
 import { isAdmin } from "../utils/isAdmin";
 import Alert from "@mui/material/Alert";
+import Button from "@mui/material/Button";
+
+import ThreeDRotationIcon from "@mui/icons-material/ThreeDRotation";
 
 export default function HomePage() {
   const [tokens, setToken] = useState([]);
@@ -94,6 +97,18 @@ export default function HomePage() {
           </Grid>
           <Grid item xs={12} sm={12} md={2}>
             <IndicationTable />
+          </Grid>
+          <Grid item xs={12} sm={12} md={5}>
+            <Button
+              variant="contained"
+              startIcon={<ThreeDRotationIcon />}
+              style={{ marginTop: 50, width: "95%" }}
+              onClick={() =>
+                window.open("https://landnft-3d.netlify.app", "_blank")
+              }
+            >
+              View in 3D
+            </Button>
           </Grid>
         </Grid>
 

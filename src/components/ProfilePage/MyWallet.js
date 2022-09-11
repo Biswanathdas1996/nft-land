@@ -3,7 +3,6 @@ import { Grid, Card, Typography, Tooltip } from "@material-ui/core";
 import Box from "@mui/material/Box";
 import Web3 from "web3";
 import { _account } from "../../CONTRACT-ABI/connect";
-import { getSymbol } from "../../utils/currencySymbol";
 
 const styles = {
   card: {
