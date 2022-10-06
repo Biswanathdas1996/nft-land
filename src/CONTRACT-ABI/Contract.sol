@@ -38,10 +38,18 @@ contract MyNFT is ERC721URIStorage, Ownable {
         uint token;
     }
 
+    struct TokenPosition {
+        string x;
+        string y;
+        string z;
+        uint token;
+    }
+
     mapping(uint256 => Royalty) internal _royalties;
     mapping(uint256 => PrivetContent) internal _privetContains;
     mapping(uint256 => Price) internal _prices;
     mapping(uint256 => TokenListingState) internal _tokenListingState;
+    mapping(uint256 => TokenPosition) internal _tokenPosition;
 
     Collection[] public collections;
 
@@ -156,10 +164,25 @@ contract MyNFT is ERC721URIStorage, Ownable {
     ) public {
         _tokenListingState[id] = TokenListingState(tokenState, id);
     }
-    
+
+        
     function getTokenListingState( uint tokenId) public view returns (string memory tokenState, uint256 token){
         TokenListingState memory tokenListingState = _tokenListingState[tokenId];
         return (tokenListingState.tokenState, tokenListingState.token );
+    }
+    
+    function setTokenPosition(
+        uint256 id,
+        string memory x,
+        string memory y,
+        string memory z
+    ) public {
+        _tokenPosition[id] = TokenPosition(x,y,z, id);
+    }
+
+    function getTokenPosition( uint tokenId) public view returns (string memory x,string memory y,string memory z, uint256 token){
+        TokenPosition memory tokenPosition = _tokenPosition[tokenId];
+        return (tokenPosition.x, tokenPosition.y, tokenPosition.z, tokenPosition.token );
     }
 
     function _setTokenPrivetContent(

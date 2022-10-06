@@ -12,6 +12,7 @@ import TopSelling from "./Pages/TopSelling";
 import CategoryWiseList from "./Pages/CategoryWiseList";
 import Profile from "./Pages/Profile";
 import HowITworks from "./Pages/HowITworks";
+import ViewModel from "./Pages/ViewModel";
 
 class Routing extends React.Component {
   render() {
@@ -41,6 +42,7 @@ class Routing extends React.Component {
         <Route exact path="/top-selling" element={<TopSelling />} />
         <Route exact path="/profile" element={<Profile />} />
         <Route exact path="/HowItWorks" element={<HowITworks />} />
+        <Route exact path="/model/category/:category" element={<ViewModel />} />
         <Route
           render={function () {
             return <h1>Not Found</h1>;

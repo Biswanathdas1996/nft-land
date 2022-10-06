@@ -4,6 +4,12 @@ import Market from "../assets/images/trade-tent-with-fresh-vegetables-vector-172
 import Hospital from "../assets/images/hospital.png";
 import Road from "../assets/images/road.png";
 
+import pool from "../assets/pool.jpg";
+import road from "../assets/road.png";
+import store from "../assets/store.jpg";
+import hospital from "../assets/hospital.png";
+import park from "../assets/grass.jpg";
+
 export const allStates = [
   {
     id: "1",
@@ -99,3 +105,96 @@ export const userAllowedActions = ["1", "2", "3"];
 
 // asset those are having img on the map
 export const assetHavingImage = ["4", "7", "6", "5", "8"];
+
+export const modelViewProps = [
+  {
+    satate: "1",
+    props: {
+      height: 2,
+      length: 2,
+      width: 2,
+      color: "rgb(255, 191, 0)",
+    },
+  },
+  {
+    satate: "2",
+    props: {
+      height: 2,
+      length: 2,
+      width: 2,
+
+      color: "rgb(255, 180, 0)",
+    },
+  },
+  {
+    satate: "3",
+    props: {
+      height: 2,
+      length: 2,
+      width: 2,
+
+      color: "red",
+    },
+  },
+  {
+    satate: "4",
+    props: {
+      height: 2,
+      length: 1,
+      width: 2,
+
+      color: "white",
+      img: park,
+    },
+  },
+  {
+    satate: "5",
+    props: {
+      height: 2,
+      length: 4,
+      width: 2,
+
+      color: "white",
+      img: hospital,
+    },
+  },
+  {
+    satate: "6",
+    props: {
+      height: 2,
+      length: 2,
+      width: 2,
+
+      color: "white",
+      img: store,
+    },
+  },
+  {
+    satate: "7",
+    props: {
+      height: 2,
+      length: 1,
+      width: 2,
+
+      color: "white",
+      img: pool,
+    },
+  },
+  {
+    satate: "8",
+    props: {
+      height: 2,
+      length: 1,
+      width: 2,
+
+      color: "white",
+      img: road,
+    },
+  },
+];
+
+export const getModelViewProps = (tokenState) => {
+  return modelViewProps?.filter(
+    (val) => val?.satate?.toString() === tokenState?.toString()
+  );
+};

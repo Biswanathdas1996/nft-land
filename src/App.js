@@ -60,14 +60,15 @@ const App = () => {
   // -------------------------------------- Razorpay end
 
   const navBarLessRoutes = ["/"];
+  const footerLessRoutes = ["/model/category"];
+
   return (
     <>
-      <CssBaseline />
       {navBarLessRoutes.indexOf(location.pathname) === -1 && (
         <Header icon={icon} symbol={symbol} />
       )}
       <Routes />
-      <Footer />
+      {!location.pathname.includes(footerLessRoutes[0]) && <Footer />}
     </>
   );
 };

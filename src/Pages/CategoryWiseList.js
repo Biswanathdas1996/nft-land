@@ -14,7 +14,7 @@ import { useParams } from "react-router-dom";
 import { isAdmin } from "../utils/isAdmin";
 import Alert from "@mui/material/Alert";
 import Button from "@mui/material/Button";
-
+import { useNavigate } from "react-router-dom";
 import ThreeDRotationIcon from "@mui/icons-material/ThreeDRotation";
 
 export default function HomePage() {
@@ -23,7 +23,7 @@ export default function HomePage() {
   const [account, setAccount] = useState(false);
 
   const { category } = useParams();
-
+  let history = useNavigate();
   useEffect(() => {
     fetchAllPosts();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -103,9 +103,7 @@ export default function HomePage() {
               variant="contained"
               startIcon={<ThreeDRotationIcon />}
               style={{ marginTop: 50, width: "95%" }}
-              onClick={() =>
-                window.open("https://landnft-3d.netlify.app", "_blank")
-              }
+              onClick={() => history(`/model/category/${category}`)}
             >
               View in 3D
             </Button>

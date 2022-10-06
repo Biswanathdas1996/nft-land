@@ -29,14 +29,13 @@ export default function NFTCard({
   tokenId,
   reload = () => null,
   isUserProfilePage = false,
+  mediaHeight = "48px",
 }) {
   const [start, setStart] = useState(false);
   const [response, setResponse] = useState(null);
   const [owner, setOwner] = useState(null);
   const [account, setAccount] = useState(null);
-
   const [listingState, setListingState] = useState(null);
-
   const [loading, setLoading] = useState(false);
 
   let history = useNavigate();
@@ -57,7 +56,6 @@ export default function NFTCard({
     setLoading(false);
   }
 
-  console.log("==listingState===>", listingState);
   const onClickOnPlot = (e) => {
     if (userAllowedActions.includes(listingState) || isAdmin(account)) {
       e.stopPropagation();
@@ -81,8 +79,9 @@ export default function NFTCard({
             padding: 0,
             margin: 0,
             overflow: "hidden",
-            height: 48,
+            height: mediaHeight,
           }}
+          title={tokenId}
         >
           <Card
             sx={{
@@ -106,7 +105,7 @@ export default function NFTCard({
             {assetHavingImage.includes(listingState) ? (
               <CardMedia
                 component="img"
-                height="48"
+                height={mediaHeight}
                 image={badgeUI(listingState)}
                 alt="green iguana"
                 style={{

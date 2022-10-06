@@ -51,8 +51,8 @@ export const _transction_signed = async (service, ...props) => {
     .once("transactionHash", (txhash) => {
       console.log(`Mining transaction ...`);
       console.log(txhash);
-      return txhash;
     })
+    .then((data) => data)
     .catch((error) => {
       const errorData = { error };
       return { error: errorData.error };
