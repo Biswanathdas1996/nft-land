@@ -99,14 +99,14 @@ export default function HomePage() {
             <IndicationTable />
           </Grid>
           <Grid item xs={12} sm={12} md={5}>
-            <Button
+            {/* <Button
               variant="contained"
               startIcon={<ThreeDRotationIcon />}
               style={{ marginTop: 50, width: "95%" }}
               onClick={() => history(`/model/category/${category}`)}
             >
               View in 3D
-            </Button>
+            </Button> */}
           </Grid>
         </Grid>
 

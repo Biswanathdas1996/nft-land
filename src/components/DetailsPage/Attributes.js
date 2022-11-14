@@ -10,7 +10,6 @@ const Attributes = ({ attributes }) => {
       sx={{
         backgroundColor: "#F0F6FF",
         width: "100%",
-        height: 400,
         padding: 0,
         paddingTop: 2,
       }}
@@ -35,7 +34,7 @@ const Attributes = ({ attributes }) => {
               display: "flex",
               alignItems: "flex-start",
               justifyContent: "Center",
-              width: "26%",
+              width: "40%",
               marginX: 2,
               marginBottom: 3,
               padding: 2,
@@ -43,10 +42,12 @@ const Attributes = ({ attributes }) => {
             }}
           >
             <Typography sx={{ color: "#797979", fontSize: 13 }}>
-              {attribute?.trait_type}
+              <small style={{ color: "#cd8506" }}>Latitude</small>{" "}
+              {attribute?.lat}
             </Typography>
             <Typography sx={{ fontSize: 15, fontWeight: "bold", mt: 1 }}>
-              {attribute?.value}
+              <small style={{ color: "#cd8506" }}>Longitude</small>{" "}
+              {attribute?.lng}
             </Typography>
           </Stack>
         ))}

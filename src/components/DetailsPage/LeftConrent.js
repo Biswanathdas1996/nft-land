@@ -9,7 +9,7 @@ import {
 
 import { currentNeteork } from "../../utils/currentNeteork";
 import { networkURL } from "../../config";
-
+import Map from "../../map/Map";
 const DetailsHead = [
   "Contract Address:",
   "Token ID:",
@@ -18,7 +18,7 @@ const DetailsHead = [
 ];
 
 export default function LeftConrent({ nftData, tokenId, ContractAddress }) {
-  const { description } = nftData;
+  const { description, attributes } = nftData;
 
   return (
     <Card
@@ -27,6 +27,13 @@ export default function LeftConrent({ nftData, tokenId, ContractAddress }) {
       }}
     >
       <CardContent sx={{ pl: 3 }}>
+        <Map
+          width="415px"
+          height="415px"
+          defaultCenter={{ lat: attributes[0].lat, lng: attributes[0].lng }}
+          defaultZoom={20}
+        />
+
         <Typography
           variant="subtitle1"
           component="div"

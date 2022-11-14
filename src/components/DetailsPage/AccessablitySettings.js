@@ -4,7 +4,7 @@ import { Card, Grid } from "@mui/material";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import ListingStateUpdate from "./ListingStateUpdate";
 
-const AccessablitySettings = ({ tokenId, account }) => {
+const AccessablitySettings = ({ tokenId, account, attributes, nftData }) => {
   return (
     <TabPanel
       value="4"
@@ -34,7 +34,12 @@ const AccessablitySettings = ({ tokenId, account }) => {
                   className="form-group"
                   style={{ marginLeft: 10, marginTop: 10 }}
                 >
-                  <ListingStateUpdate tokenId={tokenId} account={account} />
+                  <ListingStateUpdate
+                    tokenId={tokenId}
+                    account={account}
+                    attributes={attributes}
+                    nftData={nftData}
+                  />
                 </div>
               </Grid>
             </CardActionArea>

@@ -4,6 +4,7 @@ import Container from "@mui/material/Container";
 import TopBanner from "../components/Header/TopBanner";
 import BlogList from "../components/shared/BlogList";
 import CategoryList from "../components/shared/CategoryList";
+import Map from "../map/Map";
 
 export default function HomePage() {
   return (
@@ -18,6 +19,8 @@ export default function HomePage() {
         >
           <CategoryList />
         </Box>
+
+        <Map width="100%" height="700px" />
 
         <BlogList />
       </Container>

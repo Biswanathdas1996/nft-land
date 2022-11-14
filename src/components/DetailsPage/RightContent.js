@@ -271,7 +271,12 @@ const RightContent = ({
           <Attributes attributes={attributes} />
           <TransactionHistory tokenId={tokenId} />
           <PrivetContent tokenId={tokenId} />
-          <AccessablitySettings tokenId={tokenId} account={account} />
+          <AccessablitySettings
+            tokenId={tokenId}
+            account={account}
+            attributes={attributes}
+            nftData={nftData}
+          />
         </TabContext>
       </Box>
     </Container>

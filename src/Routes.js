@@ -13,12 +13,14 @@ import CategoryWiseList from "./Pages/CategoryWiseList";
 import Profile from "./Pages/Profile";
 import HowITworks from "./Pages/HowITworks";
 import ViewModel from "./Pages/ViewModel";
+import Map from "./map/Map";
 
 class Routing extends React.Component {
   render() {
     return (
       <Routes>
         <Route exact path="/" element={<Home />} />
+        <Route exact path="/map" element={<Map />} />
         <Route exact path="/publishArt" element={<PublishArt />} />
         <Route exact path="/nft-mint" element={<SingleNFT />} />
         <Route exact path="/fractional-nft-mint" element={<FractionalNFT />} />

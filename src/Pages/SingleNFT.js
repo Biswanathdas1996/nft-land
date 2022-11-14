@@ -58,20 +58,12 @@ const Mint = () => {
 
     let responseData;
 
-    const dummyAttrribute = [
-      {
-        display_type: "date",
-        trait_type: "Publish Date",
-        value: new Date(),
-      },
-    ];
-
     const metaData = {
       name: title,
       author: authorname,
       category: category,
       description: description,
-      attributes: attributes.concat(dummyAttrribute),
+      attributes: attributes,
     };
 
     const resultsSaveMetaData = await createAnduploadFileToIpfs(metaData);
@@ -377,9 +369,10 @@ const Mint = () => {
                                                       }}
                                                     >
                                                       <Field
-                                                        name={`attributes.${index}.trait_type`}
+                                                        name={`attributes.${index}.lat`}
                                                         autoComplete="flase"
-                                                        placeholder="Enter Properties name"
+                                                        type="number"
+                                                        placeholder="Enter latitude"
                                                         className={`form-control text-muted `}
                                                         style={{
                                                           marginTop: 10,
@@ -395,9 +388,10 @@ const Mint = () => {
                                                       xs={12}
                                                     >
                                                       <Field
-                                                        name={`attributes.${index}.value`}
+                                                        name={`attributes.${index}.lng`}
                                                         autoComplete="flase"
-                                                        placeholder="Enter value"
+                                                        type="number"
+                                                        placeholder="Enter longitude"
                                                         className={`form-control text-muted`}
                                                         style={{
                                                           marginTop: 10,
