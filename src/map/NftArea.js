@@ -10,6 +10,12 @@ import {
 import { useNavigate } from "react-router-dom";
 import Button from "@mui/material/Button";
 
+const getCid = (str) => {
+  let ret = str.replace(".ipfs.dweb.link/ipfs.json", "");
+  let ret2 = ret.replace("https://", "");
+  return ret2;
+};
+
 export default function NftArea({ tokenId }) {
   const [nftData, setNftData] = useState(null);
   const [start, setStart] = useState(false);
@@ -45,7 +51,10 @@ export default function NftArea({ tokenId }) {
     const getTokenListingState = await _fetch("getTokenListingState", tokenId);
     setListingState(getTokenListingState?.tokenState);
 
-    await fetch(getAllTokenUri)
+    const cid = getCid(getAllTokenUri);
+    console.log("-----getAllTokenUri>>>>>", getAllTokenUri);
+
+    await fetch(`https://ipfs.io/ipfs/${cid}/ipfs.json`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
